@@ -25,6 +25,14 @@ local function cmd(command)
   end
 end
 
+local function buffer_picker()
+  telescope.buffers {
+    sort_lastused = true,
+    sort_mru = true,
+    ignore_current_buffer = true,
+  }
+end
+
 keys.register({
     ['?'] = { telescope.oldfiles, 'recent files' },
     ['/'] = { telescope.current_buffer_fuzzy_find, 'find line' },
@@ -37,7 +45,7 @@ keys.register({
     },
     b = {
       name = 'buffer',
-      b = { telescope.buffers, 'switch' },
+      b = { buffer_picker, 'switch' },
       d = { cmd 'bd!', 'delete' },
       f = { cmd 'Format', 'format' },
     },
