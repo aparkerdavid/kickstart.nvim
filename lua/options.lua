@@ -2,6 +2,7 @@ local options = {
   termguicolors = true,
   hlsearch      = false,
   mouse         = 'a',
+  virtualedit   = 'onemore',
   clipboard     = 'unnamedplus',
   breakindent   = true,
   undofile      = true,
