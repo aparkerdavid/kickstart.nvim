@@ -3,6 +3,7 @@ local options = {
   hlsearch      = false,
   mouse         = 'a',
   virtualedit   = 'onemore',
+  autochdir     = true,
   clipboard     = 'unnamedplus',
   breakindent   = true,
   undofile      = true,
