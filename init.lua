@@ -23,6 +23,7 @@ require('lazy').setup({
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
   'tpope/vim-sleuth',
+  'is0n/fm-nvim',
   { 'numToStr/Comment.nvim', opts = {} },
   { 'folke/which-key.nvim',  opts = {} },
   { import = 'plugins' },
