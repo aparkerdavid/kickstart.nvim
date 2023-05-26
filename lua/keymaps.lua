@@ -1,7 +1,6 @@
 local keys = require('which-key')
 local telescope = require('telescope.builtin')
 local telescope_project = require('telescope').extensions.projects
-local lf = require('lf')
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
@@ -40,7 +39,7 @@ keys.register({
     f = {
       name = 'file',
       g = { telescope.git_files, 'git files' },
-      f = { lf.start, 'file manager' },
+      f = { cmd 'Xplr', 'file manager' },
       s = { cmd 'w', 'save' },
     },
     b = {
