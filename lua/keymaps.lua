@@ -76,6 +76,8 @@ keys.register({
     g = {
       name = 'git',
       g = { cmd 'Git', 'fugitive' },
+      c = { cmd 'Git commit', 'commit' },
+      s = { require('gitsigns').stage_hunk, 'stage' },
       k = { require('gitsigns').prev_hunk, 'previous hunk' },
       j = { require('gitsigns').next_hunk, 'next hunk' },
       p = { require('gitsigns').preview_hunk_inline, 'preview hunk' },
