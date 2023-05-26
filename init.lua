@@ -21,6 +21,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
   'tpope/vim-fugitive',
+  'cohama/lexima.vim',
   'tpope/vim-rhubarb',
   'tpope/vim-sleuth',
   'is0n/fm-nvim',
