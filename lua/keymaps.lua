@@ -78,7 +78,7 @@ keys.register({
       g = { cmd 'Git', 'fugitive' },
       k = { require('gitsigns').prev_hunk, 'previous hunk' },
       j = { require('gitsigns').next_hunk, 'next hunk' },
-      p = { require('gitsigns').preview_hunk, 'preview hunk' },
+      p = { require('gitsigns').preview_hunk_inline, 'preview hunk' },
     },
     p = { telescope_project.projects, 'project' },
   },
