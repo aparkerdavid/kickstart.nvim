@@ -1,5 +1,5 @@
 vim.filetype.add {
-  pattern = {
-    ['*.njk'] = 'html',
+  extension = {
+    njk = 'html',
   }
 }
