@@ -75,8 +75,7 @@ keys.register({
     },
     g = {
       name = 'git',
-      g = { cmd 'Git', 'fugitive' },
-      c = { cmd 'Git commit', 'commit' },
+      g = { cmd 'Neogit', 'git status' },
       s = { gitsigns.stage_hunk, 'stage' },
       k = { gitsigns.prev_hunk, 'previous hunk' },
       j = { gitsigns.next_hunk, 'next hunk' },
