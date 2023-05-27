@@ -24,6 +24,7 @@ require('lazy').setup({
   'cohama/lexima.vim',
   'tpope/vim-rhubarb',
   'tpope/vim-sleuth',
+  'TimUntersberger/neogit',
   { 'numToStr/Comment.nvim', opts = {} },
   { 'folke/which-key.nvim',  opts = {} },
   { import = 'plugins' },
