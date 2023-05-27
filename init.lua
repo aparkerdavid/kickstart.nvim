@@ -29,21 +29,12 @@ require('lazy').setup({
   { import = 'plugins' },
 }, {})
 
--- [[ Highlight on yank ]]
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = '*',
-})
-
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
 require('keymaps')
 require('options')
+require('yank-highlight')
 
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
