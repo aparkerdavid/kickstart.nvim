@@ -1,4 +1,5 @@
 local keys = require('which-key')
+local gitsigns = require('gitsigns')
 local telescope = require('telescope.builtin')
 local telescope_project = require('telescope').extensions.projects
 
@@ -77,10 +78,10 @@ keys.register({
       name = 'git',
       g = { cmd 'Git', 'fugitive' },
       c = { cmd 'Git commit', 'commit' },
-      s = { require('gitsigns').stage_hunk, 'stage' },
-      k = { require('gitsigns').prev_hunk, 'previous hunk' },
-      j = { require('gitsigns').next_hunk, 'next hunk' },
-      p = { require('gitsigns').preview_hunk_inline, 'preview hunk' },
+      s = { gitsigns.stage_hunk, 'stage' },
+      k = { gitsigns.prev_hunk, 'previous hunk' },
+      j = { gitsigns.next_hunk, 'next hunk' },
+      p = { gitsigns.preview_hunk_inline, 'preview hunk' },
     },
     p = { telescope_project.projects, 'project' },
   },
