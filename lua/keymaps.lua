@@ -39,7 +39,7 @@ keys.register({
     f = {
       name = 'file',
       g = { telescope.git_files, 'git files' },
-      f = { cmd 'Xplr', 'file manager' },
+      f = { cmd 'e .', 'manage files' },
       s = { cmd 'w', 'save' },
     },
     b = {
