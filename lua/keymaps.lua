@@ -46,7 +46,6 @@ keys.register({
     b = {
       name = 'buffer',
       b = { buffer_picker, 'switch' },
-      d = { cmd 'bd!', 'delete' },
       f = { cmd 'Format', 'format' },
     },
     d = {
@@ -84,5 +83,6 @@ keys.register({
       p = { gitsigns.preview_hunk_inline, 'preview hunk' },
     },
     p = { telescope_project.projects, 'project' },
+    q = { cmd 'bd!', 'delete buffer' },
   },
   { prefix = "<leader>" })
