@@ -29,9 +29,6 @@ require('lazy').setup({
   { import = 'plugins' },
 }, {})
 
--- Enable telescope fzf native, if installed
-pcall(require('telescope').load_extension, 'fzf')
-
 require('keymaps')
 require('options')
 require('yank-highlight')
