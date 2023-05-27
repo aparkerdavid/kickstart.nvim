@@ -25,6 +25,7 @@ require('lazy').setup({
   'tpope/vim-rhubarb',
   'tpope/vim-sleuth',
   'is0n/fm-nvim',
+  'stevearc/oil.nvim',
   { 'numToStr/Comment.nvim', opts = {} },
   { 'folke/which-key.nvim',  opts = {} },
   { import = 'plugins' },
