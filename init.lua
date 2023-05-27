@@ -31,6 +31,7 @@ require('lazy').setup({
 
 require('keymaps')
 require('filetypes')
+require('functions')
 require('options')
 require('yank-highlight')
 
