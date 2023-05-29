@@ -1,7 +1,6 @@
 local keys = require('which-key')
 local gitsigns = require('gitsigns')
 local telescope = require('telescope.builtin')
-local telescope_project = require('telescope').extensions.projects
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
@@ -81,7 +80,6 @@ keys.register({
       j = { gitsigns.next_hunk, 'next hunk' },
       p = { gitsigns.preview_hunk_inline, 'preview hunk' },
     },
-    p = { telescope_project.projects, 'project' },
     q = { cmd 'bd!', 'delete buffer' },
   },
   { prefix = "<leader>" })
