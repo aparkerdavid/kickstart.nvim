@@ -75,6 +75,9 @@ local on_attach = function(_, bufnr)
 end
 
 local servers = {
+  tailwindcss = {},
+  elixirls = {},
+  tsserver = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
