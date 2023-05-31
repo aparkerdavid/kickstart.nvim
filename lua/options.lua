@@ -17,6 +17,8 @@ local options = {
   completeopt   = 'menuone,noselect',
 }
 
+vim.keymap.set('n', '$', '$l') -- modified $ for virutaledit=onemore
+
 local window_options = {
   signcolumn = 'yes',
   number     = true,
