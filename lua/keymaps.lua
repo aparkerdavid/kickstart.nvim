@@ -39,6 +39,7 @@ keys.register({
       g = { telescope.git_files, 'git files' },
       f = { cmd 'e %:h', 'manage files' },
       s = { cmd 'w', 'save' },
+      a = { cmd 'A', 'alternate file' },
     },
     b = {
       name = 'buffer',
