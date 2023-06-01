@@ -34,6 +34,7 @@ else
     'cohama/lexima.vim',
     'tpope/vim-rhubarb',
     'tpope/vim-sleuth',
+    'tpope/vim-projectionist',
     { 'numToStr/Comment.nvim',   opts = {} },
     { 'folke/which-key.nvim',    opts = {} },
     { import = 'plugins', },
