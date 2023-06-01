@@ -2,7 +2,7 @@
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.maplocalleader = ','
 
 -- Install package manager
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -30,8 +30,8 @@ if vim.g.vscode then
 else
   -- ordinary Neovim
   require('lazy').setup({
-    'tpope/vim-fugitive',
     'cohama/lexima.vim',
+    'tpope/vim-fugitive',
     'tpope/vim-rhubarb',
     'tpope/vim-sleuth',
     'tpope/vim-projectionist',
