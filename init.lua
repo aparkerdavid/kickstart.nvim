@@ -35,6 +35,7 @@ else
     'tpope/vim-rhubarb',
     'tpope/vim-sleuth',
     'tpope/vim-projectionist',
+    { 'abecodes/tabout.nvim',    opts = {} },
     { 'numToStr/Comment.nvim',   opts = {} },
     { 'folke/which-key.nvim',    opts = {} },
     { import = 'plugins', },
