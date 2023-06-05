@@ -27,7 +27,6 @@ return {
 				border = false,
 				layout_config = {
 					horizontal = {
-						height = 0.9,
 						width = function(_, max_columns)
 							return max_columns
 						end,
