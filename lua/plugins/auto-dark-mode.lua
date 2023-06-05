@@ -12,6 +12,8 @@ return {
 			end,
 			set_light_mode = function()
 				vim.api.nvim_set_option('background', 'light')
+				vim.cmd('colorscheme zenbones')
+				require('lualine').setup { options = { theme = 'zenbones' } }
 			end,
 		})
 		auto_dark_mode.init()
