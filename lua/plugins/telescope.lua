@@ -33,6 +33,7 @@ return {
 						height = function(_, _, max_lines)
 							return max_lines
 						end,
+						preview_width = 0.62,
 					}
 				}
 			},
