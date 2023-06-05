@@ -36,6 +36,7 @@ keys.register({
     h = { telescope.help_tags, 'help' },
     f = {
       name = 'file',
+      d = { telescope.find_files, 'find files' },
       g = { telescope.git_files, 'git files' },
       f = { cmd 'e %:h', 'manage files' },
       s = { cmd 'w', 'save' },
