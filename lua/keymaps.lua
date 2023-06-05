@@ -76,6 +76,8 @@ keys.register({
       name = 'git',
       g = { cmd 'Neogit', 'git status' },
       s = { gitsigns.stage_hunk, 'stage' },
+      r = { gitsigns.reset_hunk, 'reset hunk' },
+      R = { gitsigns.reset_buffer, 'reset buffer' },
       k = { gitsigns.prev_hunk, 'previous hunk' },
       j = { gitsigns.next_hunk, 'next hunk' },
       p = { gitsigns.preview_hunk_inline, 'preview hunk' },
