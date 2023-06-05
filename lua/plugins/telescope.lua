@@ -21,20 +21,21 @@ return {
 						['<C-d>'] = false,
 					},
 				},
-				layout_strategy = 'bottom_pane',
-				sorting_strategy = 'ascending',
 				results_title = false,
 				preview_title = false,
 				title = false,
+				border = false,
 				layout_config = {
-					height = 10,
-				},
-				border = true,
-				borderchars = {
-					prompt = { "─", " ", " ", " ", "─", "─", " ", " " },
-					results = { " " },
-					preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
-				},
+					horizontal = {
+						height = 0.9,
+						width = function(_, max_columns)
+							return max_columns
+						end,
+						height = function(_, _, max_lines)
+							return max_lines
+						end,
+					}
+				}
 			},
 		}
 	end
