@@ -13,6 +13,7 @@ local options = {
   undofile      = true,
   ignorecase    = true,
   smartcase     = true,
+  autoread      = true,
   updatetime    = 250,
   timeout       = true,
   timeoutlen    = 300,
