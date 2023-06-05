@@ -75,6 +75,7 @@ keys.register({
     g = {
       name = 'git',
       g = { cmd 'Neogit', 'git status' },
+      c = { cmd 'Git commit', 'commit' },
       s = { gitsigns.stage_hunk, 'stage' },
       r = { gitsigns.reset_hunk, 'reset hunk' },
       R = { gitsigns.reset_buffer, 'reset buffer' },
