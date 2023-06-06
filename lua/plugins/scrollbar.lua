@@ -5,6 +5,7 @@ return {
 		require("scrollbar").setup({
 			handle = {
 				blend = 0, -- Integer between 0 and 100. 0 for fully opaque and 100 to full transparent. Defaults to 30.
+				hide_if_all_visible = false,
 			},
 			handlers = {
 				cursor = false,
