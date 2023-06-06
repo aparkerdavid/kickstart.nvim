@@ -1,3 +1,6 @@
+local function max_columns(_, max_columns) return max_columns end
+local function max_lines(_, max_columns) return max_columns end
+
 return {
 	'nvim-telescope/telescope.nvim',
 	branch = '0.1.x',
@@ -7,7 +10,7 @@ return {
 			'nvim-telescope/telescope-fzf-native.nvim',
 			build = "make",
 			config = function()
-				require("telescope").load_extension("fzf")
+				require('telescope').load_extension('fzf')
 			end,
 		}
 	},
@@ -27,12 +30,8 @@ return {
 				border = false,
 				layout_config = {
 					horizontal = {
-						width = function(_, max_columns)
-							return max_columns
-						end,
-						height = function(_, _, max_lines)
-							return max_lines
-						end,
+						width = max_columns,
+						height = max_lines,
 						preview_width = 0.62,
 					}
 				}
