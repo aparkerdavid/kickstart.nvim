@@ -30,6 +30,16 @@ local function buffer_picker()
   }
 end
 
+local function fuzzy_find_files()
+  telescope.grep_string({
+    path_display = { 'smart' },
+    only_sort_text = true,
+    word_match = "-w",
+    search = '',
+    debounce = 250,
+  })
+end
+
 keys.register({
     ['?'] = { telescope.oldfiles, 'recent files' },
     ['/'] = { telescope.current_buffer_fuzzy_find, 'find line' },
@@ -57,6 +67,7 @@ keys.register({
     },
     s = {
       name = 'search',
+      f = { fuzzy_find_files, 'fuzzy' },
       s = { telescope.live_grep, 'grep' },
       w = { telescope.grep_string, 'grep word' },
     },
