@@ -9,6 +9,8 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set('n', '<M-j>', '<C-e>')
 vim.keymap.set('n', '<M-k>', '<C-y>')
+vim.keymap.set('n', '<ScrollWheelDown>', '<C-e>')
+vim.keymap.set('n', '<ScrollWheelUp>', '<C-y>')
 
 local function cmd(command)
   if type(command) == "string" then
