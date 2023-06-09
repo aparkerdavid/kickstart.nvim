@@ -4,6 +4,7 @@ local options = {
   mouse         = 'a',
   virtualedit   = 'onemore',
   clipboard     = 'unnamedplus',
+  nowrap        = true,
   tabstop       = 2,
   shiftwidth    = 2,
   splitbelow    = true,
