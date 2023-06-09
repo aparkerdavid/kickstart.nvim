@@ -1,6 +1,8 @@
 local keys = require('which-key')
 local gitsigns = require('gitsigns')
 local telescope = require('telescope.builtin')
+local u = require('util')
+local cmd = u.cmd
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
@@ -12,39 +14,9 @@ vim.keymap.set('n', '<M-k>', '<C-y>')
 vim.keymap.set('n', '<ScrollWheelDown>', '<C-e>')
 vim.keymap.set('n', '<ScrollWheelUp>', '<C-y>')
 
-local function cmd(command)
-  if type(command) == "string" then
-    return function()
-      vim.cmd(command)
-    end
-  else
-    return function()
-      for _, command_str in ipairs(command) do
-        vim.cmd(command_str)
-      end
-    end
-  end
-end
 
-local function buffer_picker()
-  telescope.buffers {
-    sort_lastused = true,
-    sort_mru = true,
-    ignore_current_buffer = true,
-  }
-end
-
-local function fuzzy_find_files()
-  telescope.grep_string({
-    path_display = { 'smart' },
-    only_sort_text = true,
-    word_match = "-w",
-    search = '',
-    debounce = 250,
-  })
-end
-
-keys.register({
+keys.register(
+  {
     ['?'] = { telescope.oldfiles, 'recent files' },
     ['/'] = { telescope.current_buffer_fuzzy_find, 'find line' },
     h = { telescope.help_tags, 'help' },
@@ -58,7 +30,7 @@ keys.register({
     },
     b = {
       name = 'buffer',
-      b = { buffer_picker, 'switch' },
+      b = { u.buffer_picker, 'switch' },
       f = { cmd 'Format', 'format' },
     },
     d = {
@@ -71,7 +43,7 @@ keys.register({
     },
     s = {
       name = 'search',
-      f = { fuzzy_find_files, 'fuzzy' },
+      f = { u.fuzzy_find_files, 'fuzzy' },
       s = { telescope.live_grep, 'grep' },
       w = { telescope.grep_string, 'grep word' },
     },
@@ -100,4 +72,5 @@ keys.register({
     },
     q = { cmd 'bd!', 'delete buffer' },
   },
-  { prefix = "<leader>" })
+  { prefix = "<leader>" }
+)
