@@ -13,6 +13,7 @@ vim.keymap.set('n', '<M-k>', '<C-y>')
 vim.keymap.set('n', '<ScrollWheelDown>', '<C-e>')
 vim.keymap.set('n', '<ScrollWheelUp>', '<C-y>')
 
+vim.keymap.set('i', '<M-BS>', '<C-W>')
 
 keys.register(
   {
