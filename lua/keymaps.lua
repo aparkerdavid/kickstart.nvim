@@ -61,7 +61,7 @@ keys.register(
     },
     g = {
       name = 'git',
-      g = { cmd 'Neogit', 'git status' },
+      g = { cmd 'vert Git', 'git status' },
       c = { cmd 'Git commit', 'commit' },
       s = { gitsigns.stage_hunk, 'stage' },
       r = { gitsigns.reset_hunk, 'reset hunk' },
