@@ -4,6 +4,7 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
 
+local vscode = require('vscode')
 -- Install package manager
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
@@ -27,6 +28,8 @@ if vim.g.vscode then
   }, {})
 
   require('options')
+if vscode.is_embedded() then
+  vscode.setup()
 else
   -- ordinary Neovim
   require('lazy').setup({
