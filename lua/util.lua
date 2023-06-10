@@ -1,8 +1,9 @@
 local telescope = require('telescope.builtin')
+local window = require('window')
 
 local util = {}
 
-function util.cmd(command)
+function util.command(command)
   if type(command) == "string" then
     return function()
       vim.cmd(command)
@@ -13,6 +14,12 @@ function util.cmd(command)
         vim.cmd(command_str)
       end
     end
+  end
+end
+
+function util.split_command(command)
+  return function()
+    window.split(command)
   end
 end
 

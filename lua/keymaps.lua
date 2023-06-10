@@ -2,7 +2,8 @@ local keys = require('which-key')
 local gitsigns = require('gitsigns')
 local telescope = require('telescope.builtin')
 local u = require('util')
-local cmd = u.cmd
+local cmd = u.command
+local spl = u.split_command
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
@@ -61,8 +62,8 @@ keys.register(
     },
     g = {
       name = 'git',
-      g = { cmd 'vert Git', 'git status' },
-      c = { cmd 'Git commit', 'commit' },
+      g = { spl 'Git', 'git status' },
+      c = { spl 'Git commit', 'commit' },
       s = { gitsigns.stage_hunk, 'stage' },
       r = { gitsigns.reset_hunk, 'reset hunk' },
       R = { gitsigns.reset_buffer, 'reset buffer' },
