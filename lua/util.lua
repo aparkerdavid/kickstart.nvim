@@ -26,6 +26,7 @@ end
 
 function util.fuzzy_find_files()
   telescope.grep_string({
+    command = 'rg',
     path_display = { 'smart' },
     only_sort_text = true,
     word_match = "-w",

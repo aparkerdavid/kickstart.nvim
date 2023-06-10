@@ -1,9 +1,3 @@
--- Set <space> as the leader key
--- See `:help mapleader`
---  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ','
-
 local vscode = require('vscode')
 -- Install package manager
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -18,16 +12,15 @@ if not vim.loop.fs_stat(lazypath) then
   }
 end
 
-vim.opt.rtp:prepend(lazypath)
-if vim.g.vscode then
-  -- VSCode extension
-  require('lazy').setup({
-    'cohama/lexima.vim',
-    { 'numToStr/Comment.nvim',   opts = {} },
-    { import = 'plugins.minimal' },
-  }, {})
+-- Set <space> as the leader key
+-- See `:help mapleader`
+--  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ','
 
-  require('options')
+
+vim.opt.rtp:prepend(lazypath)
+
 if vscode.is_embedded() then
   vscode.setup()
 else
