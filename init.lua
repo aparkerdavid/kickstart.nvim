@@ -18,7 +18,6 @@ end
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
 
-
 vim.opt.rtp:prepend(lazypath)
 
 if vscode.is_embedded() then

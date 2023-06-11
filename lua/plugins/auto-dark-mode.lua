@@ -13,7 +13,7 @@ local function dark_theme()
 	local zenwritten = require('zenwritten')
 
 	local spec = lush.extends({ zenwritten }).with(function()
-		return { Visual { bg = "#001752" } }
+		return { Visual { bg = '#002073' } }
 	end)
 
 	lush(spec)
