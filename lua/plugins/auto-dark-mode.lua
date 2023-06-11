@@ -7,7 +7,6 @@ end
 local function dark_theme()
 	vim.api.nvim_set_option('background', 'dark')
 	vim.cmd('colorscheme zenwritten')
-	require('lualine').setup { options = { theme = 'zenwritten' } }
 
 	local lush = require('lush')
 	local zenwritten = require('zenwritten')
@@ -17,6 +16,7 @@ local function dark_theme()
 	end)
 
 	lush(spec)
+	require('lualine').setup { options = { theme = 'zenwritten' } }
 end
 
 return {
