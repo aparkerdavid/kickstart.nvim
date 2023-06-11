@@ -3,6 +3,15 @@ local window = require('window')
 
 local util = {}
 
+function util.get_buffer_dir()
+  local buffer_file_dir = vim.fn.expand('%:h')
+  if buffer_file_dir then
+    return buffer_file_dir
+  else
+    return vim.fn.getcwd()
+  end
+end
+
 function util.command(command)
   if type(command) == "string" then
     return function()

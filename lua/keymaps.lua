@@ -1,7 +1,8 @@
+local telescope = require('telescope.builtin')
 local keys = require('which-key')
 local gitsigns = require('gitsigns')
 local git = require('git')
-local telescope = require('telescope.builtin')
+local files = require('files')
 local u = require('util')
 local cmd = u.command
 
@@ -26,9 +27,9 @@ local leader_mappings = {
   h = { telescope.help_tags, 'help' },
   f = {
     name = 'file',
-    d = { telescope.find_files, 'find files' },
-    g = { telescope.git_files, 'git files' },
-    f = { cmd 'e %:h', 'manage files' },
+    d = { files.find, 'find files' },
+    g = { files.git, 'git files' },
+    f = { files.manage, 'manage files' },
     s = { cmd 'w', 'save' },
     a = { cmd 'A', 'alternate file' },
   },
