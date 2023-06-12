@@ -1,7 +1,7 @@
 local window = {}
 
 function window.hsplit(cmd)
-  vim.cmd('horizontal ' .. cmd)
+  vim.cmd('bel ' .. cmd)
 end
 
 function window.vsplit(cmd)
