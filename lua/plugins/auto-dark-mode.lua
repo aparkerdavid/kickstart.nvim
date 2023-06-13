@@ -1,24 +1,4 @@
-local function light_theme()
-	vim.api.nvim_set_option('background', 'light')
-	vim.cmd('colorscheme zenbones')
-	require('lualine').setup { options = { theme = 'zenbones' } }
-end
-
-local function dark_theme()
-	vim.api.nvim_set_option('background', 'dark')
-	vim.cmd('colorscheme zenwritten')
-
-	local lush = require('lush')
-	local zenwritten = require('zenwritten')
-
-	local spec = lush.extends({ zenwritten }).with(function()
-		return { Visual { bg = '#002073' } }
-	end)
-
-	lush(spec)
-	require('lualine').setup { options = { theme = 'zenwritten' } }
-end
-
+local theme = require 'theme'
 return {
 	'f-person/auto-dark-mode.nvim',
 	config = function()
@@ -26,8 +6,8 @@ return {
 
 		auto_dark_mode.setup({
 			update_interval = 1000,
-			set_dark_mode = dark_theme,
-			set_light_mode = light_theme,
+			set_dark_mode = theme.dark,
+			set_light_mode = theme.light,
 		})
 		auto_dark_mode.init()
 	end
