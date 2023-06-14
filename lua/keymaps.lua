@@ -76,7 +76,7 @@ local leader_mappings = {
     j = { gitsigns.next_hunk, 'next hunk' },
     p = { gitsigns.preview_hunk_inline, 'preview hunk' },
   },
-  q = { cmd 'bd!', 'delete buffer' },
+  q = { cmd { 'bp', 'bd!#' }, 'delete buffer' },
 }
 
 local insert_modes = { 'c', 'i' }
