@@ -25,14 +25,16 @@ if vscode.is_embedded() then
 else
   -- ordinary Neovim
   require('lazy').setup({
+    { dir = '/Users/parkerrueve/code/nvim-plugins/toy-nvim-plugin' },
+    'MunifTanjim/nui.nvim',
     'cohama/lexima.vim',
     'tpope/vim-fugitive',
     'tpope/vim-rhubarb',
     'tpope/vim-sleuth',
     'tpope/vim-projectionist',
-    { 'abecodes/tabout.nvim',    opts = {} },
-    { 'numToStr/Comment.nvim',   opts = {} },
-    { 'folke/which-key.nvim',    opts = {} },
+    { 'abecodes/tabout.nvim',                                      opts = {} },
+    { 'numToStr/Comment.nvim',                                     opts = {} },
+    { 'folke/which-key.nvim',                                      opts = {} },
     { import = 'plugins', },
     { import = 'plugins.minimal' },
   }, {})
