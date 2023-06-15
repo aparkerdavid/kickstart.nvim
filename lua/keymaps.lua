@@ -9,7 +9,13 @@ local cmd = u.command
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 local insert_mappings = {
-  ['<M-BS>'] = { '<C-w>', 'delete word' }
+  ['<M-BS>'] = { '<C-w>', 'delete word' },
+  ['<M-h>'] = { '<C-o>zh', 'scroll right' },
+  ['<M-l>'] = { '<C-o>zl', 'scroll left' },
+  ['<M-j>'] = { '<C-o><C-e>', 'scroll down' },
+  ['<M-k>'] = { '<C-o><C-y>', 'scroll up' },
+  ['<ScrollWheelDown>'] = { '<C-o><C-e>', 'scroll down' },
+  ['<ScrollWheelUp>'] = { '<C-o><C-y>', 'scroll up' },
 }
 
 local normal_mappings = {
