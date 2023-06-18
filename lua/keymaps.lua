@@ -1,4 +1,5 @@
 local telescope = require('telescope.builtin')
+local funkyfinder = require('funkyfinder')
 local keys = require('which-key')
 local gitsigns = require('gitsigns')
 local git = require('git')
@@ -29,7 +30,7 @@ local normal_mappings = {
 
 local leader_mappings = {
   ['?'] = { telescope.oldfiles, 'recent files' },
-  ['/'] = { telescope.current_buffer_fuzzy_find, 'find line' },
+  ['/'] = { funkyfinder.search_buffer, 'find line' },
   h = { telescope.help_tags, 'help' },
   f = {
     name = 'file',
