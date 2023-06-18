@@ -39,12 +39,12 @@ else
     { import = 'plugins.minimal' },
   }, {})
 
-  require('keymaps')
-  require('filetypes')
-  require('functions')
-  require('options')
-  require('yank-highlight')
-  require('terminal')
+  require 'keymaps'
+  require 'filetypes'
+  require 'functions'
+  require 'options'
+  require 'yank-highlight'
+  require 'terminal'
 
   -- LSP settings.
   --  This function gets run when an LSP connects to a particular buffer.
