@@ -82,6 +82,7 @@ local leader_mappings = {
     k = { gitsigns.prev_hunk, 'previous hunk' },
     j = { gitsigns.next_hunk, 'next hunk' },
     p = { gitsigns.preview_hunk_inline, 'preview hunk' },
+    ['?'] = { cmd '0Gclog', 'history' },
   },
   q = { cmd { 'bp', 'bd!#' }, 'delete buffer' },
 }
