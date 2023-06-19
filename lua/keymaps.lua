@@ -3,6 +3,7 @@ local funkyfinder = require('funkyfinder')
 local keys = require('which-key')
 local gitsigns = require('gitsigns')
 local git = require('git')
+local terminal = require 'terminal'
 local files = require('files')
 local u = require('util')
 local cmd = u.command
@@ -52,6 +53,10 @@ local leader_mappings = {
     l = { vim.diagnostic.setloclist, 'view diagnostic list' },
     k = { vim.diagnostic.goto_prev, 'previous diagnostic' },
     j = { vim.diagnostic.goto_next, 'next diagnostic' },
+  },
+  t = {
+    name = 'terminal',
+    t = { terminal.new, 'new' }
   },
   s = {
     name = 'search',

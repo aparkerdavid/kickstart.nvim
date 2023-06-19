@@ -8,8 +8,12 @@ function window.vsplit(cmd)
   vim.cmd('vertical ' .. cmd)
 end
 
+function window.is_wide()
+  return vim.fn.winwidth(0) > 160
+end
+
 function window.split(cmd)
-  if vim.fn.winwidth(0) > 160 then
+  if window.is_wide() then
     window.vsplit(cmd)
   else
     window.hsplit(cmd)
