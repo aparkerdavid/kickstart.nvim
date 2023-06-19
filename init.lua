@@ -45,6 +45,7 @@ else
   require 'options'
   require 'yank-highlight'
   require 'terminal'
+  require 'autoread'
 
   -- LSP settings.
   --  This function gets run when an LSP connects to a particular buffer.
