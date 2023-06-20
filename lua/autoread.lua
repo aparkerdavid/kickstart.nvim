@@ -5,7 +5,7 @@ vim.api.nvim_create_autocmd('BufWrite', {
     vim.defer_fn(
       function()
         vim.api.nvim_buf_call(bufnr, function()
-          vim.cmd('e!')
+          vim.cmd('checktime')
         end)
       end, 500)
   end
