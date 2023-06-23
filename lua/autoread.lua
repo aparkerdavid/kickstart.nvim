@@ -1,9 +1,11 @@
 local function schedule_checktime(bufnr, wait)
   vim.defer_fn(
     function()
-      vim.api.nvim_buf_call(bufnr, function()
-        vim.cmd('checktime')
-      end)
+      if vim.fn.bufexists(bufnr) then
+        vim.api.nvim_buf_call(bufnr, function()
+          vim.cmd('checktime')
+        end)
+      end
     end, wait)
 end
 -- Autoread is basically broken, so instead we POLL POLL POLL
