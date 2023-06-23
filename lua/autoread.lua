@@ -1,12 +1,21 @@
--- Autoread is basically broken, so we're just gonna poll lol
+local function schedule_checktime(bufnr, wait)
+  vim.defer_fn(
+    function()
+      vim.api.nvim_buf_call(bufnr, function()
+        vim.cmd('checktime')
+      end)
+    end, wait)
+end
+-- Autoread is basically broken, so instead we POLL POLL POLL
 vim.api.nvim_create_autocmd('BufWrite', {
   callback = function()
-    local bufnr = vim.fn.bufnr()
-    vim.defer_fn(
-      function()
-        vim.api.nvim_buf_call(bufnr, function()
-          vim.cmd('checktime')
-        end)
-      end, 500)
+    if vim.o.autoread then
+      local time = 0
+      local bufnr = vim.fn.bufnr()
+      repeat
+        schedule_checktime(bufnr, time)
+        time = time + 50
+      until time >= 1000
+    end
   end
 })
