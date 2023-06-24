@@ -1,7 +1,7 @@
 local function schedule_checktime(bufnr, wait)
   vim.defer_fn(
     function()
-      if vim.fn.bufexists(bufnr) then
+      if vim.fn.bufexists(bufnr) ~= 0 then
         vim.api.nvim_buf_call(bufnr, function()
           vim.cmd('checktime')
         end)
