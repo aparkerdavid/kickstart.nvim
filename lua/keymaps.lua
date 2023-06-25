@@ -8,18 +8,6 @@ local files = require('files')
 local u = require('util')
 local cmd = u.command
 
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-
-local insert_mappings = {
-  ['<M-BS>'] = { '<C-w>', 'delete word' },
-  ['<M-h>'] = { '<C-o>zh', 'scroll right' },
-  ['<M-l>'] = { '<C-o>zl', 'scroll left' },
-  ['<M-j>'] = { '<C-o><C-e>', 'scroll down' },
-  ['<M-k>'] = { '<C-o><C-y>', 'scroll up' },
-  ['<ScrollWheelDown>'] = { '<C-o><C-e>', 'scroll down' },
-  ['<ScrollWheelUp>'] = { '<C-o><C-y>', 'scroll up' },
-}
-
 local normal_mappings = {
   ['<M-h>'] = { 'zh', 'scroll right' },
   ['<M-l>'] = { 'zl', 'scroll left' },
@@ -92,12 +80,7 @@ local leader_mappings = {
   q = { cmd { 'bp', 'bd!#' }, 'delete buffer' },
 }
 
-local insert_modes = { 'c', 'i' }
 local normal_modes = { 'v', 'n' }
-
-for _, mode in pairs(insert_modes) do
-  keys.register(insert_mappings, { mode = mode })
-end
 
 for _, mode in pairs(normal_modes) do
   keys.register(normal_mappings, { mode = mode })

@@ -12,11 +12,7 @@ if not vim.loop.fs_stat(lazypath) then
   }
 end
 
--- Set <space> as the leader key
--- See `:help mapleader`
---  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ','
+require 'basic-keymaps'
 
 vim.opt.rtp:prepend(lazypath)
 
