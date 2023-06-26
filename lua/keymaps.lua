@@ -43,8 +43,10 @@ local leader_mappings = {
     j = { vim.diagnostic.goto_next, 'next diagnostic' },
   },
   t = {
-    name = 'terminal',
-    t = { terminal.new, 'new' }
+    name = 'test',
+    t = { cmd 'TestNearest', 'nearest' },
+    f = { cmd 'TestFile', 'file' },
+    a = { cmd 'TestSuite', 'file' },
   },
   s = {
     name = 'search',

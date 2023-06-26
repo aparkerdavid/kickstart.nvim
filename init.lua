@@ -28,6 +28,7 @@ else
     'tpope/vim-sleuth',
     'tpope/vim-projectionist',
     'tpope/vim-unimpaired',
+    'vim-test/vim-test',
     { dir = '/Users/parkerrueve/code/nvim-plugins/funkyfinder.nvim' },
     { 'abecodes/tabout.nvim',                                       opts = {} },
     { 'numToStr/Comment.nvim',                                      opts = {} },
