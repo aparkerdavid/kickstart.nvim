@@ -3,7 +3,6 @@ local funkyfinder = require('funkyfinder')
 local keys = require('which-key')
 local gitsigns = require('gitsigns')
 local git = require('git')
-local terminal = require 'terminal'
 local files = require('files')
 local u = require('util')
 local cmd = u.command
