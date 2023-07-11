@@ -5,7 +5,7 @@ local util = {}
 
 function util.get_buffer_dir()
   local buffer_file_dir = vim.fn.expand('%:h')
-  if buffer_file_dir then
+  if buffer_file_dir and buffer_file_dir:sub(1, 1) == "/" then
     return buffer_file_dir
   else
     return vim.fn.getcwd()
