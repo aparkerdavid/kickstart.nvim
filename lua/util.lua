@@ -4,9 +4,9 @@ local window = require('window')
 local util = {}
 
 function util.get_buffer_dir()
-  local buffer_file_dir = vim.fn.expand('%:h')
-  if buffer_file_dir and buffer_file_dir:sub(1, 1) == "/" then
-    return buffer_file_dir
+  local dir_path = vim.fn.expand('%:p')
+  if dir_path and dir_path:sub(1, 1) == "/" then
+    return dir_path
   else
     return vim.fn.getcwd()
   end
