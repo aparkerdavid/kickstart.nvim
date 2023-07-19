@@ -11,8 +11,6 @@ local insert_mappings = {
   ['<M-l>'] = '<C-o>zl',
   ['<M-j>'] = '<C-o><C-e>',
   ['<M-k>'] = '<C-o><C-y>',
-  ['<ScrollWheelDown>'] = '<C-o><C-e>',
-  ['<ScrollWheelUp>'] = '<C-o><C-y>',
 }
 
 for key, binding in pairs(insert_mappings) do

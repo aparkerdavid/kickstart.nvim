@@ -12,8 +12,8 @@ local normal_mappings = {
   ['<M-l>'] = { 'zl', 'scroll left' },
   ['<M-j>'] = { '<C-e>', 'scroll down' },
   ['<M-k>'] = { '<C-y>', 'scroll up' },
-  ['<ScrollWheelDown>'] = { '<C-e>', 'scroll down' },
-  ['<ScrollWheelUp>'] = { '<C-y>', 'scroll up' },
+  -- ['<ScrollWheelDown>'] = { '<C-e>', 'scroll down' },
+  -- ['<ScrollWheelUp>'] = { '<C-y>', 'scroll up' },
 }
 
 local leader_mappings = {
