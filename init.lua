@@ -1,25 +1,10 @@
-local vscode = require('vscode')
--- Install package manager
-local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system {
-    'git',
-    'clone',
-    '--filter=blob:none',
-    'https://github.com/folke/lazy.nvim.git',
-    '--branch=stable', -- latest stable release
-    lazypath,
-  }
-end
-
+require 'lazy-setup'
 require 'basic-keymaps'
 
-vim.opt.rtp:prepend(lazypath)
-
+local vscode = require 'vscode'
 if vscode.is_embedded() then
   vscode.setup()
 else
-  -- ordinary Neovim
   require('lazy').setup({
     'MunifTanjim/nui.nvim',
     'cohama/lexima.vim',
@@ -120,3 +105,5 @@ else
     end,
   }
 end
+
+require 'hotpot-setup'
