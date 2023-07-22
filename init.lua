@@ -105,5 +105,3 @@ else
     end,
   }
 end
-
-require 'hotpot-setup'
